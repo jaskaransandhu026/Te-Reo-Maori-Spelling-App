@@ -1,0 +1,227 @@
+/* pane */
+#scenePane {
+    -fx-pref-width: 900.0;
+    -fx-pref-height: 600.0;
+}
+
+#popUpPane {
+    -fx-pref-width: 600.0;
+    -fx-pref-height: 400.0;
+    -fx-background-color: #35BBCA;
+}
+
+#toolBarContainer {
+    -fx-background-color: #35BBCA; /* blue */
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+}
+
+#inputBarHBox {
+    -fx-background-color: #35bbca;
+    -fx-background-insets: 0.0,1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+}
+
+/* button */
+.button {
+    -fx-background-radius: 6.0,5.0;
+    -fx-background-insets: 0.0,1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+    -fx-font-family: 'Luckiest Guy';
+}
+
+#toolBarButtons {
+    -fx-background-color: #35BBCA; /* blue */
+}
+
+#toolBarButton {
+    -fx-background-color: #ccffff; /* light blue */
+    -fx-font-size: 20.0;
+}
+
+#toolBarButton:hover {
+    -fx-background-color: white;
+}
+
+#closeHelpButton {
+	-fx-background-color: orange;
+    -fx-font-size: 20.0;
+}
+
+#closeHelpButton:hover {
+    -fx-background-color: #f5b942;
+}
+
+#textFieldButton {
+    -fx-background-color: orange;
+}
+
+#textFieldButton:hover {
+    -fx-background-color: #f5b942;
+}
+
+#sceneButton {
+    -fx-font-size: 25.0;
+    -fx-background-color: orange;
+}
+
+#sceneButton:hover, #menuTopButton:hover {
+    -fx-background-color: #f5b942;
+}
+
+#menuTopButton {
+    -fx-font-size: 25.0;
+    -fx-background-color: orange;
+    -fx-pref-width: 200.0;
+}
+
+#menuBottomButton {
+    -fx-font-size: 25.0;
+    -fx-background-color: white;
+    -fx-pref-width: 200.0;
+}
+
+#menuBottomButton:hover, #whiteSceneButton:hover {
+    -fx-background-color: #dedede;
+}
+
+#whiteSceneButton {
+	-fx-font-size: 25.0;
+    -fx-background-color: white;
+}
+
+#repeatButton {
+    -fx-background-color: transparent;
+}
+
+#repeatButton:hover {
+    -fx-effect: innershadow( gaussian , orange , 10.0 ,1.0 , 1.0 , 1.0 );
+}
+
+#macronButton { 
+	-fx-font-size: 15.0;
+}
+
+/* label */
+#feedbackLabel {
+    -fx-font-family: system;
+    -fx-font-size: 20.0;
+}
+
+#hintLabel {
+    -fx-font-family: system;
+    -fx-font-size: 50.0;
+}
+
+#speedLabel, #scoreLabel, #progressLabel{
+    -fx-font-size: 20.0;
+    -fx-text-fill: #7a7a7a;
+}
+
+#timesUpLabel{
+    -fx-font-size: 20.0;
+}
+
+.label {
+    -fx-font-family: 'Luckiest Guy';
+}
+
+#scoreboardLabel {
+	-fx-font-size: 50.0;
+}
+
+#selectTopicLabel { 
+	-fx-font-size: 17.0;
+	-fx-text-fill: #FF513F;
+}
+
+/* tableview */
+.table-view{
+    -fx-background-color: white;
+    -fx-background-insets: 0.0,1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+    -fx-font-size: 20.0;
+    -fx-font-family: system;
+    -fx-border-color: transparent; 
+ }
+ 
+/* https://stackoverflow.com/questions/48690143/deactivate-blue-border-from-first-row-when-table-view-is-focused */
+.table-view:focused .table-row-cell:focused {
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+} 
+ 
+/* https://stackoverflow.com/questions/27354085/disable-row-selection-in-tableview */
+.table-row-cell:filled:selected { 
+  -fx-background: -fx-control-inner-background ;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background ;
+  -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5.0%);
+}
+.table-row-cell:odd:filled:selected {
+  -fx-background: -fx-control-inner-background-alt ;
+}
+ 
+.column-header {
+     -fx-font-family: 'Luckiest Guy';
+     -fx-font-size: 20.0;
+}
+
+/* slider */
+#speedSlider {
+    -fx-pref-width: 200.0;
+}
+
+.track {
+    -fx-padding: 3.0;
+}
+
+.thumb {
+    -fx-padding: 10.0;
+    -fx-focus-color: #a8a8a8;
+    -fx-faint-focus-color: transparent;
+}
+
+.axis-tick-mark {
+    -fx-fill: null;
+    -fx-stroke-width: 2.0px;
+}
+
+/* other components */
+.tooltip {
+    -fx-show-delay: 500.0ms;
+    -fx-font-size: 13.0;
+	-fx-font-family: default;
+}
+
+#topicsComboBox {
+    -fx-font-size: 25.0;
+    -fx-font-family: 'Luckiest Guy';
+    -fx-background-color: white; 
+    
+    -fx-background-radius: 6.0,5.0;
+    -fx-background-insets: 0.0,1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+}
+
+.list-cell:hover {
+    -fx-background-color: #35BBCA;
+}
+
+#responseTextField {
+    -fx-focus-color: transparent;
+    -fx-background-radius: 6.0,5.0;
+    -fx-background-insets: 0.0, 2.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 5.0, 0.0, 0.0, 1.0);
+}
+
+.text-field:disabled, .button:disabled {
+  -fx-opacity: 0.9 ;
+}
+
+#redCell .text{
+    -fx-fill : #FF513F;
+}
+
+#greenCell .text{
+    -fx-fill : #69D642;
+}

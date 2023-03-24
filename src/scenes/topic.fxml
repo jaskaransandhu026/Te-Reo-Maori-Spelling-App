@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="scenePane" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	xmlns="http://javafx.com/javafx/11.0.2"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="kemukupu.TopicController">
+	<children>
+		<BorderPane AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<center>
+				<VBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0"
+					spacing="15.0" BorderPane.alignment="CENTER">
+					<children>
+						<ImageView fx:id="topicImageView" fitHeight="250.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/question_mark.png" />
+							</image>
+							<VBox.margin>
+								<Insets bottom="15.0" />
+							</VBox.margin>
+						</ImageView>
+						<ComboBox fx:id="topicsComboBox"
+							onAction="#actionPickTopic" promptText="Pick a Topic ..." />
+						<Button id="sceneButton" mnemonicParsing="false"
+							onAction="#actionStart" text="Start">
+							<tooltip>
+								<Tooltip text="Tīmatatanga!" />
+							</tooltip>
+						</Button>
+						<Label fx:id="selectTopicLabel" alignment="CENTER"
+							text="Please select a topic" textAlignment="CENTER"
+							visible="false" />
+					</children>
+				</VBox>
+			</center>
+			<top>
+				<ToolBar id="toolBarContainer" prefHeight="40.0"
+					prefWidth="200.0" BorderPane.alignment="CENTER">
+					<items>
+						<fx:include fx:id="toolBar" source="toolBar.fxml" />
+					</items>
+				</ToolBar>
+			</top>
+		</BorderPane>
+	</children>
+</AnchorPane>

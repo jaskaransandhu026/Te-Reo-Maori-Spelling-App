@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="scenePane"
+	xmlns="http://javafx.com/javafx/11.0.2"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="kemukupu.ScoreboardController">
+	<children>
+		<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+			minHeight="-Infinity" minWidth="-Infinity"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<top>
+				<ToolBar id="toolBarContainer" prefHeight="40.0"
+					prefWidth="200.0" BorderPane.alignment="CENTER">
+					<items>
+						<fx:include fx:id="toolBar" source="toolBar.fxml" />
+					</items>
+				</ToolBar>
+			</top>
+			<bottom>
+				<HBox alignment="CENTER" spacing="15.0"
+					BorderPane.alignment="CENTER">
+					<BorderPane.margin>
+						<Insets bottom="25.0" />
+					</BorderPane.margin>
+					<children>
+						<Button id="sceneButton" alignment="CENTER"
+							mnemonicParsing="false" onAction="#actionBack"
+							text="Return to Home">
+							<tooltip>
+								<Tooltip text="Tahua" />
+							</tooltip>
+						</Button>
+						<Button id="whiteSceneButton" alignment="CENTER"
+							mnemonicParsing="false" onAction="#actionClear" text="Clear">
+							<tooltip>
+								<Tooltip text="Ūkui" />
+							</tooltip>
+						</Button>
+					</children>
+				</HBox>
+			</bottom>
+			<center>
+				<VBox alignment="TOP_CENTER" spacing="20.0"
+					BorderPane.alignment="CENTER">
+					<BorderPane.margin>
+						<Insets top="20.0" />
+					</BorderPane.margin>
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="100.0" pickOnBounds="true"
+									preserveRatio="true">
+									<image>
+										<Image url="@../images/trophy.png" />
+									</image>
+								</ImageView>
+								<Label id="scoreboardLabel" text="Scoreboard" />
+								<ImageView fitHeight="100.0" pickOnBounds="true"
+									preserveRatio="true">
+									<image>
+										<Image url="@../images/trophy.png" />
+									</image>
+								</ImageView>
+							</children>
+						</HBox>
+						<TableView id="wordsTableView" fx:id="resultsTableView"
+							prefHeight="300.0">
+							<VBox.margin>
+								<Insets left="100.0" right="100.0" />
+							</VBox.margin>
+						</TableView>
+					</children>
+				</VBox>
+			</center>
+		</BorderPane>
+	</children>
+</AnchorPane>
